@@ -1,9 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Cell = void 0;
 var Cell;
 (function (Cell) {
     Cell["Empty"] = "";
     Cell["X"] = "X";
     Cell["O"] = "O";
-})(Cell || (Cell = {}));
+})(Cell = exports.Cell || (exports.Cell = {}));
 var TicTacToe = /** @class */ (function () {
     function TicTacToe() {
         this.board = [

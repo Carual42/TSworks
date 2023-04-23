@@ -1,4 +1,4 @@
-enum Cell {
+export enum Cell {
     Empty = "",
     X = "X",
     O = "O",
@@ -74,6 +74,8 @@ enum Cell {
       // No winner yet
       return null;
     }
+  
   }
+
   
   

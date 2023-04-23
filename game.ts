@@ -1,27 +1,31 @@
-const game = new TicTacToe();
+// Import the TicTacToe class from the previous example
+import { TicTacToe, Cell } from "./tic-tac-toe";
 
-// X plays at (1, 1)
-game.play(1, 1);
+// Get references to the HTML elements
+const gameBoard = document.getElementById("game-board");
+const cells = gameBoard.getElementsByTagName("td");let game = new TicTacToe();
 
-// O plays at (0, 0)
-game.play(0, 0);
+// Add a click event listener to each cell
+for (let i = 0; i < cells.length; i++) {
+  const row = Math.floor(i / 3);
+  const col = i % 3;
+  cells[i].addEventListener("click", () => {
+    const result = game.play(row, col);
+    if (result) {
+      // The game is over
+      alert(result === Cell.X ? "X wins!" : "O wins!");
+      resetGame();
+    } else {
+      // Update the cell with the current player's symbol
+      cells[i].textContent = game.currentPlayer;
+    }
+  });
+}
 
-// X plays at (2, 2)
-game.play(2, 2);
-
-// O plays at (0, 2)
-game.play(0, 2);
-
-// X plays at (0, 1)
-game.play(0, 1);
-
-// O plays at (1, 0)
-game.play(1, 0);
-
-// X plays at (2, 0)
-game.play(2, 0);
-
-// O plays at (1, 2)
-game.play(1, 2);
-
-// X plays at (2, 1
+function resetGame() {
+  // Reset the game board and player
+  game = new TicTacToe();
+  for (let i = 0; i < cells.length; i++) {
+    cells[i].textContent = "";
+  }
+}
