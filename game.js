@@ -1,6 +1,8 @@
+console.log('game.j start')
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 // Import the TicTacToe class from the previous example
+console.log('game.j start')
 import { TicTacToe, Cell } from "./tic-tac-toe";
 var tic_tac_toe_1 = require("./tic-tac-toe");
 // Get references to the HTML elements
