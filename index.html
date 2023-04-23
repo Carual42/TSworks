@@ -5,8 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TS Works</title>
-</head>
-<body>
+    <style>
+        table {
+          border-collapse: collapse;
+        }
+        td {
+          width: 50px;
+          height: 50px;
+          text-align: center;
+          vertical-align: middle;
+          font-size: 30px;
+          font-weight: bold;
+          border: 1px solid black;
+        }
+      </style>
+    </head>
+    <body>
+      <table id="game-board">
+        <tr>
+          <td id="cell-0-0"></td>
+          <td id="cell-0-1"></td>
+          <td id="cell-0-2"></td>
+        </tr>
+        <tr>
+          <td id="cell-1-0"></td>
+          <td id="cell-1-1"></td>
+          <td id="cell-1-2"></td>
+        </tr>
+        <tr>
+          <td id="cell-2-0"></td>
+          <td id="cell-2-1"></td>
+          <td id="cell-2-2"></td>
+        </tr>
+      </table>
     <script src="app.js"></script>
 </body>
 </html>
